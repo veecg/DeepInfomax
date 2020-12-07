@@ -13,6 +13,8 @@ pip install -r requirements.txt
 ```
 
 ## Folder Structure
+
+```
 Experiment/
 |
 |-- data/ -default directory for storing datasets
@@ -28,7 +30,7 @@ Experiment/
 |-- models.py
 |-- requirements.txt 
 |-- readme.md
-
+```
 
 
 ## Example usage
