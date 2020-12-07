@@ -51,12 +51,14 @@ Training on a 4-GPU machine takes about 1min30s/epoch.
 
 ### Downstream task 1: Image classification: 
 1. Train classifiers: 
+
         ```
         python train_classifier -t 2 -p A0_B1.0_G0.1_1205_0145 -c 500 -e 200)
     
         ```
     
 2. Evaluate classifiers:
+
         ```
         python evaluation.py -p conv1203_2236 -c 200 -l Y
         ```
@@ -67,12 +69,14 @@ Training on a 4-GPU machine takes about 1min30s/epoch.
     ```
     python clustering.py -n 4 -k 10 -p1 A0.5_B1.0_G0.1_1202_1059 -p2 A0_B1.0_G0.1_1202_1059
     ```
+
 This script can compare up to to DIM encoders by giving the folder name of where the checkpoints are store. e.g. 'A0.5_B1.0_G0.1_1202_1059'. 
 
 
 ## Note
 
 To view the full set of commands, try:
+
     ```
     python train_DIM.py --help
     ```
