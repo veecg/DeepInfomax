@@ -44,32 +44,23 @@ Experiments can be run following the steps below:
 
 ### Train DIM
 
-```
-python train_DIM.py -e 500 -a 0.5 -b 1 -g 0.1 -lr 1e-5
-```
+`python train_DIM.py -e 500 -a 0.5 -b 1 -g 0.1 -lr 1e-5`
 
 Training on a 4-GPU machine takes about 1min30s/epoch.
 
 ### Downstream task 1: Image classification: 
 1. Train classifiers: 
 
-```
-python train_classifier -t 2 -p A0_B1.0_G0.1_1205_0145 -c 500 -e 200)
-
-```
+`python train_classifier -t 2 -p A0_B1.0_G0.1_1205_0145 -c 500 -e 200)`
     
 2. Evaluate classifiers:
 
-```
-python evaluation.py -p conv1203_2236 -c 200 -l Y
-```
+`python evaluation.py -p conv1203_2236 -c 200 -l Y`
     
 
 ### Downstream task 2: Image clustering: 
 
-```
-python clustering.py -n 4 -k 10 -p1 A0.5_B1.0_G0.1_1202_1059 -p2 A0_B1.0_G0.1_1202_1059
-```
+`python clustering.py -n 4 -k 10 -p1 A0.5_B1.0_G0.1_1202_1059 -p2 A0_B1.0_G0.1_1202_1059`
 
 This script can compare up to to DIM encoders by giving the folder name of where the checkpoints are store. e.g. 'A0.5_B1.0_G0.1_1202_1059'. 
 
@@ -78,9 +69,7 @@ This script can compare up to to DIM encoders by giving the folder name of where
 
 To view the full set of commands, try:
 
-```
-python train_DIM.py --help
-```
+`python train_DIM.py --help`
     
 ## Code Reference
 All codes are implemented on the author's own after reading and understanding the [original Pytorch implementation](https://github.com/rdevon/DIM) provided by the paper authors as well as [Duane Nielsen's implementation](https://github.com/DuaneNielsen/DeepInfomaxPytorch).
